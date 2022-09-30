@@ -1,0 +1,53 @@
+//1
+    var obj1={birth : 1998 };
+
+    var printAge=function(year){
+        return (year- this.birth);
+    }
+
+  
+    // console.log(printAge.call(obj1,2022));
+// var arg=[2022];
+
+
+//3
+// console.log(printAge.apply(obj1,arg));
+
+
+//2
+// var bound=printAge.bind(obj1);
+// console.log(bound(2022));
+  
+
+
+//4
+// var student={age:22};
+// var getAge=function(){
+//     console.log(this.age);
+// }
+// getAge.call(student);
+
+
+
+// let multiply=function(x,y){
+//     console.log(x*y);
+// }
+
+// let multiplyByTwo=multiply.bind(this  ,2);
+// multiplyByTwo(5);
+
+// let multiplyByThree=multiply.bind(this,3);
+// multiplyByThree(5);
+
+
+let multiply = function(x){
+    return function(y){
+        console.log(x*y);
+    }
+}
+
+let multiplyByTwo =multiply(2);
+multiplyByTwo(3);
+
+let multiplyByThree=multiply(3);
+multiplyByThree(5);
