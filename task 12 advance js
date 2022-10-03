@@ -1,0 +1,116 @@
+"use strict";
+// var getA =function(a){
+//     return a;
+// };
+  
+// let getA= a => a;
+// console.log(getA(1));
+
+// let square = a =>a*a;
+// var a=4;
+// let square = () =>{
+//     return a*a;
+// }
+// console.log(square());
+
+// var a=4;
+
+// let mult =(a,b)=>{return a*b};
+// console.log(mult(5,3));
+
+
+// var x = function(){
+//     this.val=1;
+//     setTimeout(function(){
+//         this.val++;
+//         console.log(this.val)
+//     },1)
+// };
+
+// var xx=new x();
+
+// var x = function(){
+//     var that=this;
+//     this.val=1;
+//     setTimeout(function(){
+//         that.val++;
+//         console.log(that.val)
+//     },1)
+// };
+
+// var xx=new x();
+
+
+// var x = function(){
+//     this.val=1;
+//     setTimeout(()=>{
+//         this.val++;
+//         console.log(this.val)
+//     },1)
+// };
+
+// var xx=new x();
+
+// var x = function(){
+//     console.log(arguments[2]);
+// }
+
+// x(1,2,3);
+
+
+// var x =(...n)=>{
+//     console.log(n[2]);
+// }
+
+// x(1,2,3);
+
+
+
+
+class student
+{   static count=0;
+    constructor(name,age,phone,marks){
+        this.name=name;
+        this.age=age;
+        this.marks=marks;
+        this.phone=phone;
+        student.count++
+    }
+    eligibility=(m,newage)=>{
+        if (this.marks>=m &&newage<=this.age){
+           
+        
+                   
+                    return true;
+                
+           
+           
+        }else{return false;}
+
+    }
+
+    number(){
+        console.log(student.count);
+    }
+
+
+}
+
+let john=new student("john",203,23098,7230);
+let johny=new student("man",30,23098,3470);
+let jo=new student("bob",10,23098,443);
+let joh=new student("sandy",50,23098,46);
+let ram=new student("ram",60,23098,70);
+
+let arr=[john,johny,jo,joh,ram];
+
+console.log(john.eligibility(15,20));
+console.log(jo.eligibility(15,20));
+
+
+
+for(var i=0;i<arr.length;i++){
+    if(arr[i].eligibility(20,25)==true){
+        console.log(arr[i].name);
+    }
+}
